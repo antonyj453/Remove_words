@@ -1,0 +1,15 @@
+import re
+pattern = re.compile(r"No.", re.IGNORECASE)
+pattern1 = re.compile(r"Time", re.IGNORECASE)
+pattern2 = re.compile(r"Destination", re.IGNORECASE)
+pattern3 = re.compile(r"Protocol Length Info", re.IGNORECASE)
+
+with open('E:\\txt\\new.txt', 'r') as in_file:
+    for line in in_file:
+        if pattern.search(line) != None:
+                sa=pattern
+                sa1=pattern1
+                sa2=pattern2
+                sa3=pattern3
+                print(sa.pattern,sa1.pattern,sa2.pattern,sa3.pattern)
+                
