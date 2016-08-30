@@ -1,0 +1,48 @@
+f = open('E:\\txt\\Dns.txt','r')
+
+a = ['No.','Time','Source','Destination','Protocol Length Info']
+
+lst = []
+
+for line in f:
+
+    for word in a:
+
+        if word in line:
+
+            line = line.replace(word,'')
+
+    lst.append(line)
+
+f.close()
+
+f = open('E:\\txt\\Dns.txt','w')
+
+for line in lst:
+
+    f.write(line)
+
+f.close()
+
+?
+
+clean_lines = []
+
+with open('E:\\txt\\Dns.txt','r') as fl:
+
+   
+
+        lines = (fl.readlines())
+
+        
+
+clean_lines = [l.strip() for l in lines if l.strip()]
+
+ 
+
+with open('E:\\txt\\Dns.txt','w') as fl:
+
+    fl.writelines('\n'.join(clean_lines))
+
+?
+
